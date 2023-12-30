@@ -73,6 +73,10 @@ public class OfferService {
         }
     }
 
+    public List<OfferDto> findAll() {
+        return offerRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
+    }
+
     private OfferDto toDto(Offer offer) {
         OfferDto dto = new OfferDto();
         dto.setId(offer.getId());
@@ -83,7 +87,5 @@ public class OfferService {
         return dto;
     }
 
-    public List<OfferDto> findAll() {
-        return offerRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
-    }
+
 }
