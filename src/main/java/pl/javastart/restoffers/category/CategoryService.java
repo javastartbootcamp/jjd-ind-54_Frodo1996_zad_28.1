@@ -2,7 +2,6 @@ package pl.javastart.restoffers.category;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import pl.javastart.restoffers.offer.OfferRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
